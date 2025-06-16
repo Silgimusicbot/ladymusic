@@ -7,8 +7,8 @@ from pyrogram import filters
 load_dotenv()
 
 # Get this value from my.telegram.org/apps
-API_ID = int(getenv("API_ID", ""))
-API_HASH = getenv("API_HASH", "")
+API_ID = int(getenv("API_ID", "28966180"))
+API_HASH = getenv("API_HASH", "61685cb638a45b448ad485dbb38bfab4")
 
 # Get your token from @BotFather on Telegram.
 BOT_TOKEN = getenv("BOT_TOKEN", "7712882758:AAGFAeY8_z22KqI8a1D-p4lYwM04vhvzCxE")
@@ -91,21 +91,21 @@ confirmer = {}
 
 
 START_IMG_URL = getenv(
-    "START_IMG_URL", "https://telegra.ph/file/7d573b68b803bf874aaad.jpg"
+    "START_IMG_URL", "https://files.catbox.moe/k6javr.jpeg"
 )
 PING_IMG_URL = getenv(
-    "PING_IMG_URL", "https://telegra.ph/file/7d573b68b803bf874aaad.jpg"
+    "PING_IMG_URL", "https://files.catbox.moe/k6javr.jpeg"
 )
-PLAYLIST_IMG_URL = "https://telegra.ph/file/7d573b68b803bf874aaad.jpg"
-STATS_IMG_URL = "https://telegra.ph/file/7d573b68b803bf874aaad.jpg"
-TELEGRAM_AUDIO_URL = "https://telegra.ph/file/7d573b68b803bf874aaad.jpg"
-TELEGRAM_VIDEO_URL = "https://telegra.ph/file/7d573b68b803bf874aaad.jpg"
-STREAM_IMG_URL = "https://telegra.ph/file/7d573b68b803bf874aaad.jpg"
-SOUNCLOUD_IMG_URL = "https://telegra.ph/file/7d573b68b803bf874aaad.jpg"
-YOUTUBE_IMG_URL = "https://telegra.ph/file/7d573b68b803bf874aaad.jpg"
-SPOTIFY_ARTIST_IMG_URL = "https://telegra.ph/file/7d573b68b803bf874aaad.jpg"
-SPOTIFY_ALBUM_IMG_URL = "https://telegra.ph/file/7d573b68b803bf874aaad.jpg"
-SPOTIFY_PLAYLIST_IMG_URL = "https://telegra.ph/file/7d573b68b803bf874aaad.jpg"
+PLAYLIST_IMG_URL = "https://files.catbox.moe/k6javr.jpeg"
+STATS_IMG_URL = "https://files.catbox.moe/k6javr.jpeg"
+TELEGRAM_AUDIO_URL = "https://files.catbox.moe/k6javr.jpeg"
+TELEGRAM_VIDEO_URL = "https://files.catbox.moe/k6javr.jpeg"
+STREAM_IMG_URL = "https://files.catbox.moe/k6javr.jpeg"
+SOUNCLOUD_IMG_URL = "https://files.catbox.moe/k6javr.jpeg"
+YOUTUBE_IMG_URL = "https://files.catbox.moe/k6javr.jpeg"
+SPOTIFY_ARTIST_IMG_URL = "https://files.catbox.moe/k6javr.jpeg"
+SPOTIFY_ALBUM_IMG_URL = "https://files.catbox.moe/k6javr.jpeg"
+SPOTIFY_PLAYLIST_IMG_URL = "https://files.catbox.moe/k6javr.jpeg"
 
 
 def time_to_seconds(time):
