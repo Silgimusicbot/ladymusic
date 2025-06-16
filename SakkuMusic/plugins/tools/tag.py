@@ -36,15 +36,15 @@ async def tag_all(client: Client, message: Message):
         tagged += 1
 
         if count % 5 == 0:
-            await message.reply(f"{custom_text}\n\n{text}" if custom_text else text)
+            await message.reply(f"{text} {custom_text}" if custom_text else text)
             await asyncio.sleep(2)
             text = ""
 
     if text:
-        await message.reply(f"{custom_text}\n\n{text}" if custom_text else text)
+        await message.reply(f"{text} {custom_text}" if custom_text else text)
 
     tagging_active[message.chat.id] = False
-    await sent.edit(f"✅ Etiketleme tamamlandı. Toplam: {tagged} kişi etiketlendi.")
+    await sent.reply(f"✅ Etiketleme tamamlandı. Toplam: {tagged} kişi etiketlendi.")
 
 
 
@@ -74,14 +74,14 @@ async def tag_admins(client: Client, message: Message):
             continue
 
         if count % 5 == 0 and text:
-            await message.reply(f"{custom_text}\n\n{text}" if custom_text else text)
+            await message.reply(f"{text} {custom_text}" if custom_text else text)
             await asyncio.sleep(2)
             text = ""
 
     if text:
-        await message.reply(f"{custom_text}\n\n{text}" if custom_text else text)
+        await message.reply(f"{text} {custom_text}" if custom_text else text)
 
-    await sent.edit(f"✅ Yönetici etiketleme tamamlandı. Toplam: {tagged} yönetici etiketlendi.")
+    await sent.reply(f"✅ Yönetici etiketleme tamamlandı. Toplam: {tagged} yönetici etiketlendi.")
 
 
 @app.on_message(filters.command("tektag", prefixes=["/"]) & filters.group)
@@ -103,7 +103,7 @@ async def tag_individual(client: Client, message: Message):
             continue
 
         try:
-            text = f"{custom_text}\n[{member.user.first_name}](tg://user?id={member.user.id})" if custom_text else f"[{member.user.first_name}](tg://user?id={member.user.id})"
+            text = f"[{member.user.first_name}](tg://user?id={member.user.id}) {custom_text}" if custom_text else f"[{member.user.first_name}](tg://user?id={member.user.id})"
             await message.reply(text)
             await asyncio.sleep(1.5)
             tagged += 1
@@ -111,7 +111,7 @@ async def tag_individual(client: Client, message: Message):
             print(f"Hata: {e}")
 
     tagging_active[message.chat.id] = False
-    await sent.edit(f"✅ Tek tek etiketleme tamamlandı. Toplam: {tagged} kişi etiketlendi.")
+    await sent.reply(f"✅ Tek tek etiketleme tamamlandı. Toplam: {tagged} kişi etiketlendi.")
 
 @app.on_message(filters.command("stoptag", prefixes=["/"]) & filters.group)
 async def stop_tag(client: Client, message: Message):
