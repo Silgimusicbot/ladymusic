@@ -1,123 +1,71 @@
 import asyncio
-from pyrogram import Client, filters
+import re
+from pyrogram.enums import ChatMemberStatus, ParseMode
 from pyrogram.types import Message
-from pyrogram.enums import ChatMemberStatus
+from pyrogram import filters
+from SakkuMusic import app  
 
-from SakkuMusic import app
 
-tagging_active = {}
+tag_durdur = {}
 
-def is_admin(status):
-    return status in [ChatMemberStatus.OWNER, ChatMemberStatus.ADMINISTRATOR]
+def escape_markdown(text: str) -> str:
+    return re.sub(r"([\[\]()_~`>#+\-=|{}.!])", r"\\\1", text)
 
-@app.on_message(filters.command("tag", prefixes=["/"]) & filters.group)
-async def tag_all(client: Client, message: Message):
-    user = await client.get_chat_member(message.chat.id, message.from_user.id)
-    if not is_admin(user.status):
-        return await message.reply("❌ Bu komutu sadece yöneticiler kullanabilir.")
+@app.on_message(filters.command("stoptag") & filters.group)
+async def stop_tag(_, message: Message):
+    chat_id = message.chat.id
+    tag_durdur[chat_id] = True
+    await message.reply("⛔ Etiketleme işlemi durduruldu.")
 
-    custom_text = " ".join(message.command[1:])
-    sent = await message.reply("👥 Etiketleme başlatılıyor...")
+@app.on_message(filters.command("tag") & filters.group)
+async def tag_command(client, message: Message):
+    await tag_users(client, message, only_admins=False, tektek=False)
 
-    tagging_active[message.chat.id] = True
+@app.on_message(filters.command("tektag") & filters.group)
+async def tektag_command(client, message: Message):
+    await tag_users(client, message, only_admins=False, tektek=True)
+
+@app.on_message(filters.command("admintag") & filters.group)
+async def admintag_command(client, message: Message):
+    await tag_users(client, message, only_admins=True, tektek=True)
+
+async def tag_users(client, message: Message, only_admins=False, tektek=False):
+    chat_id = message.chat.id
+    custom_text = message.text.split(None, 1)[1] if len(message.text.split()) > 1 else "Buraya bax 🫵"
+
+    if only_admins:
+        members = [member async for member in app.get_chat_members(chat_id) if member.status in (ChatMemberStatus.ADMINISTRATOR, ChatMemberStatus.OWNER)]
+    else:
+        members = [member async for member in app.get_chat_members(chat_id)]
+
+    tag_durdur[chat_id] = False
     count = 0
-    tagged = 0
-    text = ""
+    temp_tags = []
 
-    async for member in client.get_chat_members(message.chat.id):
-        if not tagging_active.get(message.chat.id):
-            return await sent.edit(f"⛔ Etiketleme durduruldu. Toplam: {tagged} kişi etiketlendi.")
-
-        if member.user.is_bot:
+    for member in members:
+        if tag_durdur.get(chat_id):
+            break
+        if not member.user or member.user.is_bot:
             continue
 
-        text += f"[{member.user.first_name}](tg://user?id={member.user.id}) "
-        count += 1
-        tagged += 1
+        name = escape_markdown(member.user.first_name)
+        mention = f"[{name}](tg://user?id={member.user.id})"
 
-        if count % 5 == 0:
-            await message.reply(f"{text} {custom_text}" if custom_text else text)
-            await asyncio.sleep(2)
-            text = ""
-
-    if text:
-        await message.reply(f"{text} {custom_text}" if custom_text else text)
-
-    tagging_active[message.chat.id] = False
-    await sent.reply(f"✅ Etiketleme tamamlandı. Toplam: {tagged} kişi etiketlendi.")
-
-
-
-@app.on_message(filters.command("admintag", prefixes=["/"]) & filters.group)
-async def tag_admins(client: Client, message: Message):
-    user = await client.get_chat_member(message.chat.id, message.from_user.id)
-    if not is_admin(user.status):
-        return await message.reply("❌ Bu komutu sadece yöneticiler kullanabilir.")
-
-    custom_text = " ".join(message.command[1:])
-    sent = await message.reply("👥 Yönetici etiketleme başlatılıyor...")
-
-    text = ""
-    count = 0
-    tagged = 0
-
-    async for member in client.get_chat_members(message.chat.id):
-        if member.user.is_bot:
-            continue
-        try:
-            m_status = (await client.get_chat_member(message.chat.id, member.user.id)).status
-            if is_admin(m_status):
-                text += f"[{member.user.first_name}](tg://user?id={member.user.id}) "
-                count += 1
-                tagged += 1
-        except:
-            continue
-
-        if count % 5 == 0 and text:
-            await message.reply(f"{text} {custom_text}" if custom_text else text)
-            await asyncio.sleep(2)
-            text = ""
-
-    if text:
-        await message.reply(f"{text} {custom_text}" if custom_text else text)
-
-    await sent.reply(f"✅ Yönetici etiketleme tamamlandı. Toplam: {tagged} yönetici etiketlendi.")
-
-
-@app.on_message(filters.command("tektag", prefixes=["/"]) & filters.group)
-async def tag_individual(client: Client, message: Message):
-    user = await client.get_chat_member(message.chat.id, message.from_user.id)
-    if not is_admin(user.status):
-        return await message.reply("❌ Bu komutu sadece yöneticiler kullanabilir.")
-
-    custom_text = " ".join(message.command[1:])
-    sent = await message.reply("👤 Tek tek etiketleme başlatılıyor...")
-
-    tagging_active[message.chat.id] = True
-    tagged = 0
-
-    async for member in client.get_chat_members(message.chat.id):
-        if not tagging_active.get(message.chat.id):
-            return await sent.edit(f"⛔ Etiketleme durduruldu. Toplam: {tagged} kişi etiketlendi.")
-        if member.user.is_bot:
-            continue
-
-        try:
-            text = f"[{member.user.first_name}](tg://user?id={member.user.id}) {custom_text}" if custom_text else f"[{member.user.first_name}](tg://user?id={member.user.id})"
-            await message.reply(text)
+        if tektek:
+            text = f"{mention} {custom_text}"
+            await message.reply(text, parse_mode=ParseMode.MARKDOWN)
             await asyncio.sleep(1.5)
-            tagged += 1
-        except Exception as e:
-            print(f"Hata: {e}")
+        else:
+            temp_tags.append(mention)
+            if len(temp_tags) == 5:
+                text = " ".join(temp_tags) + f" {custom_text}"
+                await message.reply(text, parse_mode=ParseMode.MARKDOWN)
+                temp_tags.clear()
+                await asyncio.sleep(2)
 
-    tagging_active[message.chat.id] = False
-    await sent.reply(f"✅ Tek tek etiketleme tamamlandı. Toplam: {tagged} kişi etiketlendi.")
+        count += 1
 
-@app.on_message(filters.command("stoptag", prefixes=["/"]) & filters.group)
-async def stop_tag(client: Client, message: Message):
-    user = await client.get_chat_member(message.chat.id, message.from_user.id)
-    if not is_admin(user.status):
-        return await message.reply("❌ Bu komutu sadece yöneticiler kullanabilir.")
+    if not tag_durdur.get(chat_id):
+        await message.reply(f"✅ Toplam {count} kişi etiketlendi.")
 
-    tagging_active[message.chat.id] = False
-    await message.reply("🛑 Etiketleme işlemi durduruldu.")
+    tag_durdur[chat_id] = False
