@@ -144,3 +144,12 @@ HELP_16 = """<b><u>Şarkı Sözleri Komutları</b></u>
 
 `/lyrics [şarkı adı]` - İstenilen şarkının sözlerini ara ve sonuçları gönder.
 """
+HELP_17 = """<b><u>Etiketleme Komutları</u></b>
+
+- <code>/tag</code> [mesaj] - Gruptaki tüm üyeleri 5'li şekilde etiketler.
+- <code>/admintag</code> [mesaj] - Sadece grup yöneticilerini etiketler.
+- <code>/tektag</code> [mesaj] - Gruptaki tüm üyeleri tek tek etiketler.
+- <code>/stoptag</code> - Devam eden etiketleme işlemini durdurur.
+
+✅ Etiketlemeler sırasında isterseniz özel mesaj da ekleyebilirsiniz.
+"""
