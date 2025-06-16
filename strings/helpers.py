@@ -1,141 +1,146 @@
-HELP_1 = """<b><u>Admin Komandaları:</b></u>
+HELP_1 = """<b><u>Admin Komutları:</b></u>
 
-Sadəcə komandaların başında <b>ç</b> əlavə edin və ya onları kanal üçün istifadə etmək üçün komandaların əvvəlində <b>ç</b> istifadə edin.
+Komutların başına <b>ç</b> ekleyin veya komutları kanalda kullanmak için komutların başına <b>ç</b> kullanın.
 
-/pause - Hazırda oxunan yayını dayandırın.
+/pause - Şu anda oynatılan yayını duraklatın.
 
-/resume - Dayandırılmış yayını davam etdirin.
+/resume - Duraklatılmış bir yayını devam ettirin.
 
-/skip - Hazırda oxunan yayını keçirin və növbəti treki oxumağa başlayın.
+/skip - Şu anda oynatılan yayını atlayın ve bir sonraki parçayı oynatmaya başlayın.
 
-/end və ya /stop - Qoşulan təkrarları silin və hazırda oxunan yayını dayandırın.
+/end veya /stop - Eklenen tüm tekrarları kaldırın ve şu anda oynatılan yayını durdurun.
 
-/player - İnteraktiv oynatıcı panelini əldə edin.
+/player - Etkileşimli oynatıcı panelini alın.
 
-/queue - Qoşulmuş treklərin siyahısını göstərin.
+/queue - Eklenen parçaların listesini gösterin.
 
 """
 
-HELP_2 = """<b><u>Auth İstifadəçiləri:</b></u>
+HELP_2 = """<b><u>Auth Kullanıcıları:</b></u>
 
-Auth istifadəçiləri, söhbət üçün admin hüquqlarına sahib olmadan bota admin hüquqlarını əldə edə bilərlər.
+Yetkili kullanıcılar, sohbette yönetici haklarına sahip olmadan botta yönetici hakları elde edebilir.
 
-/auth [istifadəçi adı/istifadəçi_ID] - Botun auth siyahısına bir istifadəçi əlavə edin.
-/unauth [istifadəçi adı/istifadəçi_ID] - Auth istifadəçilərini auth siyahısından çıxarın.
-/authusers - Qrupun auth istifadəçilərinin siyahısını göstərin.
+/auth [kullanıcı adı/kullanıcı_kimliği] - Botun yetki listesine bir kullanıcı ekle.
+
+/unauth [kullanıcı adı/kullanıcı_kimliği] - Yetkili kullanıcıları yetki listesinden kaldır.
+
+/authusers - Grup için yetkili kullanıcıların listesini göster.
 """
 
-HELP_3 = """<u><b>Broadcast Xüsusiyyəti:</b></u> [yalnızca sudo istifadəçilər üçün]
+HELP_3 = """<u><b>Broadcast Özelliği:</b></u> [yalnızca sudo kullanıcıları için]
 
-/broadcast [mesaj və ya mesaja yanıt] - Mesajınızı botun server qruplarına broadcast edin.
+/broadcast [mesaj veya mesaja yanıt] - Mesajınızı botun sunucu gruplarına yayınlayın.
 
-<u>Broadcast rejimləri:</u>
-<b>-pin</b> - Broadcast edilmiş mesajınızı server qruplarında pinləyin.
-<b>-pinloud</b> - Broadcast edilmiş mesajınızı server qruplarında pinləyin və üzvlərə bildiriş göndərin.
-<b>-user</b> - Mesajınızı botunuzu işə salmış istifadəçilərə broadcast edin.
-<b>-assistant</b> - Mesajınızı botun köməkçi hesabından broadcast edin.
-<b>-nobot</b> - Botu mesajı broadcast etməyə məcbur etməyin.
+<u>Yayın modları:</u>
+<b>-pin</b> - Yayınladığınız mesajı sunucu gruplarına sabitleyin.
+<b>-pinloud</b> - Yayınladığınız mesajı sunucu gruplarına sabitleyin ve üyelere bildirim gönderin.
+<b>-user</b> - Mesajınızı botunuzu başlatan kullanıcılara yayınlayın.
+<b>-assistant</b> - Mesajınızı botun asistan hesabından yayınlayın.
+<b>-nobot</b> - Botu mesajı yayınlamaya zorlamayın.
 
-<b>Nümunə:</b> <code>/broadcast -user -assistant -pin Salam.</code>
+<b>Örnek:</b> <code>/broadcast -user -assistant -pin Merhaba.</code>
 """
 
-HELP_4 = """<u><b>Çat Qara Siyahısı Xüsusiyyəti:</b></u> [yalnızca sudo istifadəçilər üçün]
+HELP_4 = """<u><b>Sohbet Kara Listesi Özelliği:</b></u> [yalnızca sudo kullanıcıları için]
 
-Botumuzu qıymətli botumuzu istifadə etmədən əvvəl şübhəli çatlarla məhdudlaşdırın.
+Değerli botumuzu kullanmadan önce botumuzu şüpheli sohbetlerle sınırlayın.
 
-/blacklistchat [chat ID] - Botu bu çatdan istifadə etməkdən məhdudlaşdırın.
-/whitelistchat [chat ID] - Qara siyahıya alınmış çatı ağ siyahıya alın.
-/blacklistedchat - Qara siyahıya alınmış çatların siyahısını göstərir.
+/blacklistchat [chat ID] - Botun bu sohbeti kullanmasını sınırlayın.
+/whitelistchat [chat ID] - Kara listeye alınmış bir sohbeti beyaz listeye alın.
+/blacklistedchat - Kara listeye alınmış sohbetlerin bir listesini gösterir.
 """
 
-HELP_5 = """<u><b>İstifadəçilərin Qadağan Edilməsi:</b></u> [yalnızca sudo istifadəçilər üçün]
+HELP_5 = """<u><b>Kullanıcıların Banlanması:</b></u> [yalnızca sudo kullanıcıları için]
 
-Qara siyahıya alınmış istifadəçiləri nəzarətdən keçirin, beləliklə onlar bot komandalarını istifadə edə bilməzlər.
+Kara listeye alınmış kullanıcıları izleyin, böylece bot komutlarını kullanamazlar.
 
-/block [istifadəçi adı və ya istifadəçi ID-si] - İstifadəçini botumuzdan qadağan edin.
-/unblock [istifadəçi adı və ya istifadəçi ID-si] - Qadağan edilmiş istifadəçini açın.
-/blockedusers - Qadağan edilmiş istifadəçilərin siyahısını göstərir.
+/block [kullanıcı adı veya kullanıcı kimliği] - Bir kullanıcıyı botumuzdan yasaklayın.
+
+/unblock [kullanıcı adı veya kullanıcı kimliği] - Engellenen bir kullanıcının engellemesini kaldırın.
+
+/blockedusers - Engellenen kullanıcıların listesini gösterir.
 """
 
-HELP_6 = """"\<u>\<b>Əmrlərin Siyahısı:</b></u>
+HELP_6 = """"\<u>\<b>Komutların Listi:</b></u>
 
-Siz audio/video nümayişi kanalında oxuna bilər.
+Ses/video oynatma kanalında oynatabilirsiniz.
 
-/cplay - Tələb olunan səslərə audio nümayişi başladır.
-/cvplay - Tələb olunan video əsərlərinə video nümayişi başladır.
-/cplayforce və ya /cvplayforce - Davam edən audio/video nümayişi dayandır və tələb olunan əsərlərin nümayişi başladır.
+/cplay - İstenen sesin ses oynatımını başlatır.
 
-/channelplay [Söhbət istifadəçi adı və ya ID] və ya [deaktiv] - Kanalı qrupa qoşur və göndərilən əmrə əsasən əsərlərin nümayişi başlayır."
+/cvplay - İstenen video çalışmalarının video oynatımını başlatır.
+
+/cplayforce veya /cvplayforce - Devam eden bir ses/video oynatmayı durdurur ve istenen çalışmaların oynatımını başlatır.
+
+/channelplay [Sohbet kullanıcı adı veya kimliği] veya [devre dışı] - Kanalı gruba ekler ve gönderilen komuta göre çalışmaların oynatımını başlatır.""""
+
+HELP_7 = """<u><b>Qlobal Ban Özelliği:</b></u> [yalnızca sudo kullanıcıları için]
+
+- `/gban` [kullanıcı adı veya kimlik] - Kullanıcıyı tüm sohbetlerden yasaklar ve botu kullanmasını engeller.
+- `/ungban` [kullanıcı adı veya kimlik] - Küresel olarak yasaklanmış bir kullanıcının yasağını kaldırır.
+- `/gbannedusers` - Küresel olarak yasaklanmış kullanıcıların bir listesini listeler.
 """
 
-HELP_7 = """<u><b>Qlobal Qadagalar Xüsusiyyəti:</b></u> [yalnızca sudo istifadəçilər üçün]
+HELP_8 = """<b><u>Döngü Yayınla:</b></u>
 
-- `/gban` [istifadəçi adı və ya ID] - İstifadəçini bütün söhbətlərdə qadağan edir və onu botdan istifadə etməkdən məhrum edir.
-- `/ungban` [istifadəçi adı və ya ID] - Qlobal olaraq qadağan edilmiş istifadəçinin qadağasını açır.
-- `/gbannedusers` - Qlobal olaraq qadağan edilmiş istifadəçilərin siyahısını göstərir.
+<b>Mevcut akış aşağıdaki komutla döngüye alınacaktır:</b>
+
+- `/loop [enable/disable]` - Mevcut akışın döngüye alınmasını etkinleştirir veya devre dışı bırakır.
+- `/loop [1, 2, 3, ...]` - Belirtilen sayıda döngüye izin verir.
 """
 
-HELP_8 = """<b><u>Dövrə Yayımla:</b></u>
+HELP_9 = """<u><b>Bakım Modu:</b></u> [yalnızca sudo-lar için]
 
-<b>İndi yayımlanan axın aşağıdakı əmr ilə təkrarlanacaq:</b>
+- `/logs` - Botun aktivitelerinin kurallarını alın.
 
-- `/loop [aktivləşdir/söndür]` - İndi yayımlanan axının təkrarlanmasını aktivləşdirir və ya söndürür.
-- `/loop [1, 2, 3, ...]` - Göstərilən say qədər təkrarlanmağa icazə verir.
+- `/logger [enable/disable]` - Bot, botta gerçekleşen aktiviteleri günlüğe kaydeder.
+
+- `/maintenance [enable/disable]` - Botunuzun bakım modunu etkinleştirin veya devre dışı bırakın.
 """
 
-HELP_9 = """<u><b>Bakım Rejimi:</b></u> [yalnızca sudo-lar üçün]
+HELP_10 = """<b><u>Ping ve Status:</b></u>
 
-- `/logs` - Botun fəaliyyətlərinin qaydalarını əldə edin.
+- `/start` - Müzik botunu başlat.
+- `/help` - Komutların açıklamalarının bulunduğu Yardım menüsünü al.
 
-- `/logger [aktivləşdir/söndür]` - Bot, botda baş verən fəaliyyətləri qeydə alacaq.
+- `/ping` - Botun ping'ini ve sistem durumunu gösterir.
 
-- `/maintenance [aktivləşdir/söndür]` - Botunuzun bakım rejimini aktivləşdirin və ya söndürün.
+- `/stats` - Botun genel durumunu gösterir.
 """
 
-HELP_10 = """<b><u>Pinğ və Status:</b></u>
+HELP_11 = """<u><b>Play Komutları:</b></u>
 
-- `/start` - Musiqi botunu başladın.
-- `/help` - Komandaların izahı ilə Yardım menyunu əldə edin.
+- `v` - Video oynatmayı durdur.
+- `force` - Zorla oynatmayı durdur.
 
-- `/ping` - Botun ping və sistem statusunu göstərir.
+- `/play` veya `/vplay` - İstenen parçayı videoya oynatır.
 
-- `/stats` - Botun ümumi statuslarını göstərir.
+- `/playforce` veya `/vplayforce` - Şu anda oynatılan hızı durdurur ve istenen parçayı oynatır.
 """
 
-HELP_11 = """<u><b>Play Komandaları:</b></u>
+HELP_12 = """<b><u>Karışık Oynatma:</b></u>
 
-- `v` - Video play üçün dayandır.
-- `force` - Force play üçün dayandır.
-
-- `/play` və ya `/vplay` - Tələb olunan treki videonun yayına salır.
-
-- `/playforce` və ya `/vplayforce` - İndi yayında olan sürəti dayandır və tələb olunan treki yayına salır.
+- `/shuffle` - Çalma listesini karıştırır.
+- `/queue` - Karıştırılmış çalma listesini gösterir.
 """
 
-HELP_12 = """<b><u>Qarışıq Oynatma:</b></u>
+HELP_13 = """<b><u>Streame Geçiş:</b></u>
 
-- `/shuffle` - Oynatma siyahısını qarışdırır.
-- `/queue` - Qarışıq oynatılan siyahını göstərir.
+- `/seek [saniye cinsinden süre]` - Akışı belirtilen süreye taşır.
+- `/seekback [saniye cinsinden süre]` - Akışı geri taşır.
 """
 
-HELP_13 = """<b><u>Streamə Zəfər:</b></u>
+HELP_14 = """<b><u>Mahnı indirme:</b></u>
 
-- `/seek [saniyə cinsində müddət]` - Streami verilən müddətə getirir.
-- `/seekback [saniyə cinsində müddət]` - Streami geriyə getirir.
+- `/song [şarkı adı/yt URL]` - YouTube'dan herhangi bir parçayı MP3 veya MP4 formatında indirin.
 """
 
-HELP_14 = """<b><u>Mahnı yükləmə:</b></u>
+HELP_15 = """<b><u>Hız Komutları</b></u>
 
-- `/song [mahnı adı/yt URL]` - YouTube-dan hər hansı bir treki MP3 və ya MP4 formatında yükləyin.
+- `/speed` veya `/playback` - Gruptaki ses bozulmasının hızını ayarlamak için.
+- `/cspeed` veya `/cplayback` - Kanaldaki ses bozulmasının hızını ayarlamak için.
 """
 
-HELP_15 = """<b><u>Sürət Əmriləri</b></u>
+HELP_16 = """<b><u>Şarkı Sözleri Komutları</b></u>
 
-- `/speed` və ya `/playback` - Qrupdakı səs təhrifat sürətini tənzimləmək üçün.
-- `/cspeed` və ya `/cplayback` - Kanalda səs təhrifat sürətini tənzimləmək üçün.
-"""
-
-HELP_16 = """<b><u>Musiqi Sözləri Əmrləri</b></u>
-
-`/lyrics [mahnı adı]` - Tələb olunan mahnının sözlərini axtar və nəticələri göndər.
+`/lyrics [şarkı adı]` - İstenilen şarkının sözlerini ara ve sonuçları gönder.
 """
