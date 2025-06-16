@@ -71,7 +71,7 @@ Ses/video oynatma kanalında oynatabilirsiniz.
 
 /cplayforce veya /cvplayforce - Devam eden bir ses/video oynatmayı durdurur ve istenen çalışmaların oynatımını başlatır.
 
-/channelplay [Sohbet kullanıcı adı veya kimliği] veya [devre dışı] - Kanalı gruba ekler ve gönderilen komuta göre çalışmaların oynatımını başlatır.""""
+/channelplay [Sohbet kullanıcı adı veya kimliği] veya [devre dışı] - Kanalı gruba ekler ve gönderilen komuta göre çalışmaların oynatımını başlatır."""
 
 HELP_7 = """<u><b>Qlobal Ban Özelliği:</b></u> [yalnızca sudo kullanıcıları için]
 
