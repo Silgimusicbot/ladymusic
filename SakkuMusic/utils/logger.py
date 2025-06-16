@@ -11,14 +11,14 @@ async def play_logs(message, streamtype):
 <b>{app.mention} Play Log</b>
 
 <b>Qrup ID:</b> <code>{message.chat.id}</code>
-<b>Qrup Adı:</b> {message.chat.title}
+<b>Qrup İsmi:</b> {message.chat.title}
 <b>Qrup linki:</b> @{message.chat.username}
 
-<b>İstifadəçi ID:</b> <code>{message.from_user.id}</code>
+<b>Kullanıcı ID:</b> <code>{message.from_user.id}</code>
 <b>Adı:</b> {message.from_user.mention}
-<b>İstifadəçi Adı:</b> @{message.from_user.username}
+<b>Kullanıcı Adı:</b> @{message.from_user.username}
 
-<b>Tələbi:</b> {message.text.split(None, 1)[1]}
+<b>İsteğı:</b> {message.text.split(None, 1)[1]}
 <b>Platform:</b> {streamtype}"""
         if message.chat.id != LOGGER_ID:
             try:
