@@ -84,7 +84,7 @@ admin_39: "1 oy kaldırıldı."
 admin_40: "Oylandı."
 
 start_1: "<b>{0} Bot Harika Çalışıyor ✅</b>"
-start_2: "<b>{0} Merhaba 👋🏻</b>\n\n<b>Adım {1</b>\n<b>Beni grubunuza ekleyerek sesli sohbette müzik dinleyebilirsiniz ✨🎶</b>"
+start_2: "<b>{0} Merhaba 👋🏻</b>\n\n<b>Adım {1}</b>\n<b>Beni grubunuza ekleyerek sesli sohbette müzik dinleyebilirsiniz ✨🎶</b>"
 start_3: "<b>{0} Merhaba 👋🏻</b>\n<b>Beni {2} grubuna eklediğiniz için teşekkür ederim. ❤️</b>\n\n<b>{1} hizmetinizdeyim. 👾</b>"
 start_4: "<b>Süper Grup Gerekli</b>\n\nLütfen Grubunuzu <b>Süper Grup</b>'a dönüştürün ve ardından beni geri ekleyin.\n\n<b>Süper Grup nasıl oluşturulur?</b>\n- Grubunuzun sohbet geçmişini oluşturun <b>Görünür</b>."
 start_5: "<b>↝ Sohbet Engellendi ↜</b>\n\nBu sohbet {0} veritabanında engellendi.\nSohbetinizin engellemesini kaldırmak için lütfen <a href={1}>sudo kullanıcısı</a> veya <a href={. 2}>destek sohbeti</a> ile iletişime geçin."
