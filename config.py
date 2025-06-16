@@ -11,7 +11,7 @@ API_ID = int(getenv("API_ID", ""))
 API_HASH = getenv("API_HASH", "")
 
 # Get your token from @BotFather on Telegram.
-BOT_TOKEN = getenv("BOT_TOKEN", "5366398706:AAEXjFLIlj1Z1fMhPIZibn03f5TQs8bFhs0")
+BOT_TOKEN = getenv("BOT_TOKEN", "7712882758:AAGFAeY8_z22KqI8a1D-p4lYwM04vhvzCxE")
 
 # Get your mongo url from cloud.mongodb.com
 MONGO_DB_URI = getenv("MONGO_DB_URI", "")
@@ -23,28 +23,28 @@ SONG_DOWNLOAD_DURATION = int(
 )  # Remember to give value in Minutes
 
 # Chat id of a group for logging bot's activities
-LOGGER_ID = int(getenv("LOGGER_ID", "-1002551344112"))
+LOGGER_ID = int(getenv("LOGGER_ID", "-1002213502435"))
 
 # Get this value from @MissRose_Bot on Telegram by /id
-OWNER_ID = int(getenv("OWNER_ID", "7874510376"))
+OWNER_ID = int(getenv("OWNER_ID", "7782221523"))
 
 ## Fill these variables if you're deploying on heroku.
 # Your heroku app name
-HEROKU_APP_NAME = getenv("HEROKU_APP_NAME", "uzeyir")
+HEROKU_APP_NAME = getenv("HEROKU_APP_NAME", "ladymusic")
 # Get it from http://dashboard.heroku.com/account
 HEROKU_API_KEY = getenv("HEROKU_API_KEY", "")
 
 UPSTREAM_REPO = getenv(
     "UPSTREAM_REPO",
-    "https://github.com/RahidBot/UzeyirMusic",
+    "https://github.com/Silgimusicbot/ladymusic",
 )
 UPSTREAM_BRANCH = getenv("UPSTREAM_BRANCH", "main")
 GIT_TOKEN = getenv(
     "GIT_TOKEN", ""
 )  # Fill this variable if your upstream repository is private
 
-SUPPORT_CHANNEL = getenv("SUPPORT_CHANNEL", "https://t.me/zikooblog")
-SUPPORT_CHAT = getenv("SUPPORT_CHAT", "https://t.me/sohbetNeptun")
+SUPPORT_CHANNEL = getenv("SUPPORT_CHANNEL", "https://t.me/ladymusicc")
+SUPPORT_CHAT = getenv("SUPPORT_CHAT", "https://t.me/ladymusicc")
 
 # Set this to True if you want the assistant to automatically leave chats after an interval
 AUTO_LEAVING_ASSISTANT = bool(getenv("AUTO_LEAVING_ASSISTANT", None))
@@ -66,7 +66,7 @@ TG_VIDEO_FILESIZE_LIMIT = int(getenv("TG_VIDEO_FILESIZE_LIMIT", 1073741824))
 
 
 # Get your pyrogram v2 session from @SessionMotherBot on Telegram
-STRING1 = getenv("STRING_SESSION", "BQEpUwIAE73QHnAYfrAD7rK6vvVDg31QappZREQKc80EDtrNgKwCBCUFsSq-ZxeQtzOpH2LDaCkVdyUogwvHiUr8kpoeCIh3vh2es0lBs-zbc_6x0iL7UQIl8nB0qgtUbHdYmpCI61y_V0rqaR01YyG0ocWqmaYnffBQISOOmMlR82FCA1NOuJqgWO1YlgFB-ZeAfnJ0Gv0X0oxSmhdtkTXbz3XzlzCwgwqppqGX60KJNJRgcxf7IE9ucW9jEW3SLow80Kvc4_e0P00ZTtpTF-kIBP392e6Mvwb3fFZeY3FU8d6cKG2TW4hWXGEJcC_DwIq1JgQhsAzaL14SdXIKjf0NO_NLdwAAAAHDBWw0AA")
+STRING1 = getenv("STRING_SESSION", "BAGrKmgAEzb0rFuW4xR1fclQUBEwwYZ2SvVglTxKgUZahlqSTryFqfkEnLQhypF6Oll3TVnIUJwTZvnNGPAOTJXYiTWKa6Mvtc_Wql7iIeJpY4hfRoiOPOCJheRl730AfIopD8SK95ensuE3jDgWiLmu8PjTbETlBX4IU0Uxm6k2QeDl0KY9RyDuka9l0GjTSoXvmPjgWBYcVGEn7ZCHG31qlFj4O7vxG76BCmVPFPNXjmxi-nGUFUAch88hPaj-4sZxKdzoIQhw6LVzqLveZ16vSJMRXWcO5E5MgJ-dt2HgU6C_dfoZEUNEtu09qXiAVNI26NxTBfRlMtS_B_HnscjafJfwrQAAAAHNmKndAA")
 STRING2 = getenv("STRING_SESSION2", None)
 STRING3 = getenv("STRING_SESSION3", None)
 STRING4 = getenv("STRING_SESSION4", None)
