@@ -31,7 +31,7 @@ async def admintag_command(client, message: Message):
 
 async def tag_users(client, message: Message, only_admins=False, tektek=False):
     chat_id = message.chat.id
-    custom_text = message.text.split(None, 1)[1] if len(message.text.split()) > 1 else "Buraya bax 🫵"
+    custom_text = message.text.split(None, 1)[1] if len(message.text.split()) > 1 else ""
 
     if only_admins:
         members = [member async for member in app.get_chat_members(chat_id) if member.status in (ChatMemberStatus.ADMINISTRATOR, ChatMemberStatus.OWNER)]
