@@ -42,7 +42,7 @@ async def start_pm(client, message: Message, _):
             if await is_on_off(2):
                 return await app.send_message(
                     chat_id=config.LOGGER_ID,
-                    text=f"{message.from_user.mention} Şarkı bilgisi görüntülendi. <b>Sudo kullanıcısı</b>\n\n<b>🆔</b> <code>{message.from_user.id}</code>\n<b>👤</b> @{message.from_user.username}",
+                    text=f"{message.from_user.mention} Mahnı məlumatına baxdı. <b>Sudo istifadəçisi</b>\n\n<b>🆔</b> <code>{message.from_user.id}</code>\n<b>👤</b> @{message.from_user.username}",
                 )
             return
         if name[0:3] == "inf":
@@ -80,7 +80,7 @@ async def start_pm(client, message: Message, _):
             if await is_on_off(2):
                 return await app.send_message(
                     chat_id=config.LOGGER_ID,
-                    text=f"{message.from_user.mention} Şarkı bilgisi görüntülendi.\n\n<b>🆔</b> <code>{message.from_user.id}</code>\n<b>👤</b> @{message.from_user.username}",
+                    text=f"{message.from_user.mention} Mahnı məlumatına baxdı.\n\n<b>🆔</b> <code>{message.from_user.id}</code>\n<b>👤</b> @{message.from_user.username}",
                 )
     else:
         out = private_panel(_)
