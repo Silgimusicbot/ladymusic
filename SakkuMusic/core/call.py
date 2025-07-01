@@ -557,27 +557,15 @@ class Call(PyTgCalls):
 
     async def start(self):
         LOGGER(__name__).info("Starting PyTgCalls Client...\n")
-
         if config.STRING1:
-            await self.userbot1.start()
             await self.one.start()
-
         if config.STRING2:
-            await self.userbot2.start()
             await self.two.start()
-            
-
         if config.STRING3:
-            await self.userbot3.start()
             await self.three.start()
-            
-
         if config.STRING4:
-            await self.userbot4.start()
             await self.four.start()
-
         if config.STRING5:
-            await self.userbot5.start()
             await self.five.start()
 
     async def decorators(self):
