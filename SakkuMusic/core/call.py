@@ -559,24 +559,26 @@ class Call(PyTgCalls):
         LOGGER(__name__).info("Starting PyTgCalls Client...\n")
 
         if config.STRING1:
+            await self.userbot1.start()
             await self.one.start()
-            await self.one.get_me()  # 👈 Bu əlavə olunmalıdır
 
         if config.STRING2:
+            await self.userbot2.start()
             await self.two.start()
-            await self.two.get_me()
+            
 
         if config.STRING3:
+            await self.userbot3.start()
             await self.three.start()
-            await self.three.get_me()
+            
 
         if config.STRING4:
+            await self.userbot4.start()
             await self.four.start()
-            await self.four.get_me()
 
         if config.STRING5:
+            await self.userbot5.start()
             await self.five.start()
-            await self.five.get_me()
 
     async def decorators(self):
         @self.one.on_kicked()
