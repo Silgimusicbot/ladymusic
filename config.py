@@ -11,7 +11,7 @@ API_ID = int(getenv("API_ID", "28966180"))
 API_HASH = getenv("API_HASH", "61685cb638a45b448ad485dbb38bfab4")
 
 # Get your token from @BotFather on Telegram.
-BOT_TOKEN = getenv("BOT_TOKEN", "7712882758:AAGFAeY8_z22KqI8a1D-p4lYwM04vhvzCxE")
+BOT_TOKEN = getenv("BOT_TOKEN", "7682362793:AAHHwKx9sJOvpJMELPHwZvTQvwcONcyh7IQ")
 
 # Get your mongo url from cloud.mongodb.com
 MONGO_DB_URI = getenv("MONGO_DB_URI", "mongodb+srv://TEAMBABY01:UTTAMRATHORE09@cluster0.vmjl9.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0")
@@ -23,14 +23,14 @@ SONG_DOWNLOAD_DURATION = int(
 )  # Remember to give value in Minutes
 
 # Chat id of a group for logging bot's activities
-LOGGER_ID = int(getenv("LOGGER_ID", "-1002213502435"))
+LOGGER_ID = int(getenv("LOGGER_ID", "-1002840261862"))
 
 # Get this value from @MissRose_Bot on Telegram by /id
-OWNER_ID = int(getenv("OWNER_ID", "7782221523"))
+OWNER_ID = int(getenv("OWNER_ID", "6191141179"))
 
 ## Fill these variables if you're deploying on heroku.
 # Your heroku app name
-HEROKU_APP_NAME = getenv("HEROKU_APP_NAME", "ladymusic")
+HEROKU_APP_NAME = getenv("HEROKU_APP_NAME", "rythmmusic")
 # Get it from http://dashboard.heroku.com/account
 HEROKU_API_KEY = getenv("HEROKU_API_KEY", "")
 
@@ -43,8 +43,8 @@ GIT_TOKEN = getenv(
     "GIT_TOKEN", ""
 )  # Fill this variable if your upstream repository is private
 
-SUPPORT_CHANNEL = getenv("SUPPORT_CHANNEL", "https://t.me/ladymusicc")
-SUPPORT_CHAT = getenv("SUPPORT_CHAT", "https://t.me/ladymusicc")
+SUPPORT_CHANNEL = getenv("SUPPORT_CHANNEL", "https://t.me/rythmmusicchat")
+SUPPORT_CHAT = getenv("SUPPORT_CHAT", "https://t.me/rythmmusicchat")
 
 # Set this to True if you want the assistant to automatically leave chats after an interval
 AUTO_LEAVING_ASSISTANT = bool(getenv("AUTO_LEAVING_ASSISTANT", None))
@@ -66,7 +66,7 @@ TG_VIDEO_FILESIZE_LIMIT = int(getenv("TG_VIDEO_FILESIZE_LIMIT", 1073741824))
 
 
 # Get your pyrogram v2 session from @SessionMotherBot on Telegram
-STRING1 = getenv("STRING_SESSION", "BAGrKmgAEzb0rFuW4xR1fclQUBEwwYZ2SvVglTxKgUZahlqSTryFqfkEnLQhypF6Oll3TVnIUJwTZvnNGPAOTJXYiTWKa6Mvtc_Wql7iIeJpY4hfRoiOPOCJheRl730AfIopD8SK95ensuE3jDgWiLmu8PjTbETlBX4IU0Uxm6k2QeDl0KY9RyDuka9l0GjTSoXvmPjgWBYcVGEn7ZCHG31qlFj4O7vxG76BCmVPFPNXjmxi-nGUFUAch88hPaj-4sZxKdzoIQhw6LVzqLveZ16vSJMRXWcO5E5MgJ-dt2HgU6C_dfoZEUNEtu09qXiAVNI26NxTBfRlMtS_B_HnscjafJfwrQAAAAHNmKndAA")
+STRING1 = getenv("STRING_SESSION", "AgGfzwMAhpItTGxJ9Yvbvvt6y7eWWHubHkiKechRg_DkEEs2EDCfc57RBHQYnyxneMntBjolgfrGaWbdmJ9w8FDBcD9GUNi-HaMnz6XJ-hfiGYI3Tvfa2g78XXTpjBGVIWFNlc0Y2WHbNvF-8FuDZvXT9IDSFpMF7aD63rodcOM-XTI0MAjLGDC5umY87mHDE7zWIDtMGBd0_dyfITCilBHkOa4fyrfd8OIpuZhwGtV8NTSTYQXswgHp8T6xJ_8q9r2yIojk209gneUC3FCslQlCHouEATwkZN27uBxhz3-bzvWiJUuEmeKyHWFIe-6aoxiRirVORl9p3TZjN4cicHXlhDtuIAAAAAGrMHlaAA")
 STRING2 = getenv("STRING_SESSION2", None)
 STRING3 = getenv("STRING_SESSION3", None)
 STRING4 = getenv("STRING_SESSION4", None)
@@ -91,21 +91,21 @@ confirmer = {}
 
 
 START_IMG_URL = getenv(
-    "START_IMG_URL", "https://files.catbox.moe/k6javr.jpeg"
+    "START_IMG_URL", "https://files.catbox.moe/crc5ei.jpeg"
 )
 PING_IMG_URL = getenv(
-    "PING_IMG_URL", "https://files.catbox.moe/k6javr.jpeg"
+    "PING_IMG_URL", "https://files.catbox.moe/crc5ei.jpeg"
 )
-PLAYLIST_IMG_URL = "https://files.catbox.moe/k6javr.jpeg"
-STATS_IMG_URL = "https://files.catbox.moe/k6javr.jpeg"
-TELEGRAM_AUDIO_URL = "https://files.catbox.moe/k6javr.jpeg"
-TELEGRAM_VIDEO_URL = "https://files.catbox.moe/k6javr.jpeg"
-STREAM_IMG_URL = "https://files.catbox.moe/k6javr.jpeg"
-SOUNCLOUD_IMG_URL = "https://files.catbox.moe/k6javr.jpeg"
-YOUTUBE_IMG_URL = "https://files.catbox.moe/k6javr.jpeg"
-SPOTIFY_ARTIST_IMG_URL = "https://files.catbox.moe/k6javr.jpeg"
-SPOTIFY_ALBUM_IMG_URL = "https://files.catbox.moe/k6javr.jpeg"
-SPOTIFY_PLAYLIST_IMG_URL = "https://files.catbox.moe/k6javr.jpeg"
+PLAYLIST_IMG_URL = "https://files.catbox.moe/crc5ei.jpeg"
+STATS_IMG_URL = "https://files.catbox.moe/crc5ei.jpeg"
+TELEGRAM_AUDIO_URL = "https://files.catbox.moe/crc5ei.jpeg"
+TELEGRAM_VIDEO_URL = "https://files.catbox.moe/crc5ei.jpeg"
+STREAM_IMG_URL = "https://files.catbox.moe/crc5ei.jpeg"
+SOUNCLOUD_IMG_URL = "https://files.catbox.moe/crc5ei.jpeg"
+YOUTUBE_IMG_URL = "https://files.catbox.moe/crc5ei.jpeg"
+SPOTIFY_ARTIST_IMG_URL = "https://files.catbox.moe/crc5ei.jpeg"
+SPOTIFY_ALBUM_IMG_URL = "https://files.catbox.moe/crc5ei.jpeg"
+SPOTIFY_PLAYLIST_IMG_URL = "https://files.catbox.moe/crc5ei.jpeg"
 
 
 def time_to_seconds(time):
