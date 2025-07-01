@@ -41,8 +41,8 @@ class Userbot:
                 assistantids.append(bot.id)
 
                 try:
-                    await bot.join_chat("Aliza_support")
-                    await bot.join_chat("Aliza_update")
+                    await bot.join_chat("rythmmusicchat")
+                    
                 except:
                     pass
 
